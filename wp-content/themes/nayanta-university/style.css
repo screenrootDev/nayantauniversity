@@ -17536,6 +17536,47 @@ body:has(.section-inner-hero) .header-main.active .menu-toggle .line {
 body.landing-page .header-main .hide-nav {
   display: none;
 }
+
+/* .header-main.active .header-link-with-image svg {
+  fill: #002b27;
+} */
+
+.header-main .header-link-with-image .black-svg {
+  display: none;
+  @media (max-width: 1299.98px) {
+    display: block;
+    width: 15px;
+    height: 16px;
+  }
+}
+.header-main a.header-link-with-image {
+  @media (max-width: 1299.98px) {
+    color: #002b27 !important;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+.header-main.active .header-link-with-image .white-svg {
+  display: none;
+}
+.header-main .header-link-with-image .white-svg {
+  @media (max-width: 1299.98px) {
+    display: none;
+  }
+}
+.header-main.active .header-link-with-image .black-svg {
+  display: block;
+}
+.header-main a.header-link-with-image {
+  color: #fff;
+  @media (max-width: 1299.98px) {
+    color: #002b27;
+  }
+}
+.header-main.active a.header-link-with-image {
+  color: #002b27;
+}
 .wrapper {
   overflow: hidden;
 }
@@ -20379,6 +20420,8 @@ section-gallery .section-heading h2 {
   width: 100%;
   /* aspect-ratio: 1 / 1; Makes it perfectly square */
   position: relative;
+
+  cursor: pointer;
 }
 
 .square-img img {
