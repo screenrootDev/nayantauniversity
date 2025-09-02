@@ -5,7 +5,7 @@
 
             <!-- Section Heading -->
             <div class="col-12 fade">
-                <?php 
+                <?php
                 $section_heading = get_sub_field('your_guide_to_admissions_section_heading');
                 if (!empty($section_heading)) : ?>
                     <div class="section-heading">
@@ -108,30 +108,30 @@
 
 <!-- FAQ Visibility Toggle Script -->
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    // Get all tabs with show more buttons
-    document.querySelectorAll('.tab-content-item').forEach(function (tab) {
-        const btn = tab.querySelector('.btn-showMore');
-        const extraFaqs = tab.querySelectorAll('.extra-faq');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all tabs with show more buttons
+        document.querySelectorAll('.tab-content-item').forEach(function(tab) {
+            const btn = tab.querySelector('.btn-showMore');
+            const extraFaqs = tab.querySelectorAll('.extra-faq');
 
-        // Skip if button doesn't exist
-        if (!btn) return;
+            // Skip if button doesn't exist
+            if (!btn) return;
 
-        // Hide extra FAQs on load
-        extraFaqs.forEach(faq => faq.style.display = 'none');
+            // Hide extra FAQs on load
+            extraFaqs.forEach(faq => faq.style.display = 'none');
 
-        // Toggle visibility on button click
-        btn.addEventListener('click', function () {
-            const expanded = btn.classList.toggle('expanded');
+            // Toggle visibility on button click
+            btn.addEventListener('click', function() {
+                const expanded = btn.classList.toggle('expanded');
 
-            if (expanded) {
-                extraFaqs.forEach(faq => faq.style.display = 'list-item');
-                btn.textContent = '<?php esc_html_e('show less', 'nayanta'); ?>';
-            } else {
-                extraFaqs.forEach(faq => faq.style.display = 'none');
-                btn.textContent = '<?php esc_html_e('show more', 'nayanta'); ?>';
-            }
+                if (expanded) {
+                    extraFaqs.forEach(faq => faq.style.display = 'list-item');
+                    btn.textContent = '<?php esc_html_e('show less', 'nayanta'); ?>';
+                } else {
+                    extraFaqs.forEach(faq => faq.style.display = 'none');
+                    btn.textContent = '<?php esc_html_e('show more', 'nayanta'); ?>';
+                }
+            });
         });
     });
-});
 </script>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Name: Admissions
  */
@@ -31,11 +32,13 @@ if ($landing_query->have_posts()) :
 
                 if ($layout === 'admissions_page_banner') {
                     get_template_part('template-parts/section', 'admissions-page-banner');
-                }  else if($layout === 'admissions_your_guide_to_admissions_section'){
+                } else if ($layout === 'admissions_your_guide_to_admissions_section') {
                     get_template_part('template-parts/section', 'admissions-your-guide-to-admissions');
-                }  else if($layout === 'admissions_page_faqs'){
+                } else if ($layout === 'admissions_page_faqs') {
                     get_template_part('template-parts/section', 'admissions-page-faqs');
-                } 
+                } else if ($layout === 'meet_the_team_block') {
+                    get_template_part('template-parts/meet_the_team_block');
+                }
 
             endwhile;
         else :
