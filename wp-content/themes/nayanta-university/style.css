@@ -20490,4 +20490,17 @@ section-gallery .section-heading h2 {
   background-color: transparent;
   border: 1px solid var(--Black, #2e2d2c);
 }
+
+.team-card .card-link svg {
+  filter: grayscale(1);
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+.team-card {
+  &:hover .card-link svg {
+    filter: grayscale(0);
+  }
+}
+
 /*# sourceMappingURL=app.css.map */
